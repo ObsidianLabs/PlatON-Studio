@@ -72,7 +72,7 @@ const overrides = [
     COMPILER_EXECUTABLE_NAME: '"alaya-truffle"',
     COMPILER_VERSION_KEY: '"alaya-truffle"',
     DOCKER_IMAGE_NODE: '"obsidians/alaya"',
-    DOCKER_IMAGE_TRUFFLE: '"obsidians/alaya-truffle"',
+    DOCKER_IMAGE_COMPILER: '"obsidians/alaya-truffle"',
   }),
   addWasmLoader(),
 ]
