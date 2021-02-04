@@ -16,7 +16,7 @@ nodeManager.generateCommand = ({ name, version }) => {
     `-v ${process.env.PROJECT}-${name}:/data`,
     `-w /data`,
     `${process.env.DOCKER_IMAGE_NODE}:${version}`,
-    `platon --identity platon --datadir . --port=16789 --rpc --rpcaddr=0.0.0.0 --rpcport=6789 --rpccorsdomain=* --rpcvhosts=* --rpcapi=db,platon,net,web3,admin,personal --nodiscover --nodekey=./nodekey --cbft.blskey=./blskey`
+    `platon --identity platon --datadir . --port=16789 --rpc --rpcaddr=0.0.0.0 --rpcport=6789 --rpccorsdomain="*" --rpcvhosts="*" --rpcapi=db,platon,net,web3,admin,personal --nodiscover --nodekey=./nodekey --cbft.blskey=./blskey`
   ].join(' ')
 }
 
