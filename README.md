@@ -56,10 +56,6 @@ Alaya Studio 安装包可以下载 [macOS](https://platon-assets-1303090311.cos.
 
 节点实例创建完成后，实例列表将显示刚刚创建好的实例，点击实例的绿色 *Start* 按钮启动 Alaya 节点。启动完成后，你可以在下方的日志查看器中检查节点运行日志。
 
-<p align="center">
-  <img src="./screenshots/node_log.png" width="720px">
-</p>
-
 ### 创建智能合约项目
 
 点击顶部的 *Project* 标签，主页面将切换至项目管理器。点击页面右上角的 *New* 按钮打开创建项目弹窗，输入项目名称并选择合适的模版，Alaya Studio 目前提供了四个模版：
