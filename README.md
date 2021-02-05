@@ -48,7 +48,7 @@ Alaya Studio 安装包可以下载 [macOS](https://platon-assets-1303090311.cos.
 
 点击顶部的 *Network* 标签，主页面将切换为网络管理器。在网络管理器中，我们可以进行 Alaya 节点版本和节点实例的管理，包括下载、删除 Alaya 节点版本，根据不同版本创建、删除和运行节点实例。
 
-点击主页面中右上角的 *New Instance* 按钮打开创建新实例的弹窗，填写实例名称和选择合适的版本，点击 *Create* 按钮完成节点实例的创建。
+点击主页面中右上角的 *New Instance* 按钮打开创建新实例的弹窗，填写实例名称和选择合适的版本，点击 *Create* 按钮完成节点实例的创建。创建节点实例时间比较长 可能需要等待 1 - 2 分钟。
 
 <p align="center">
   <img src="./screenshots/new_instance.png" width="720px">
