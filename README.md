@@ -42,7 +42,7 @@ Alaya Studio 安装包可以下载 [macOS](https://platon-assets-1303090311.cos.
 
 你可以在密钥管理器中创建、导入并管理密钥对。在创建和编辑密钥对的时候，你可以为该密钥对设置别名，方便在后续的使用中进行识别。密钥管理器除了对密钥对进行储存管理外，还将为创世区块提供创世地址。创建新的 Alaya 节点实例时，会使用密钥管理器里所有的地址作为创世地址。
 
-**再继续之前，请先在密钥管理器中创建一些密钥对，作为接下来创建节点实例的创世地址。**
+**在继续之前，请先在密钥管理器中创建一些密钥对，作为接下来创建节点实例的创世地址。**
 
 ### 启动节点
 
@@ -64,9 +64,9 @@ Alaya Studio 安装包可以下载 [macOS](https://platon-assets-1303090311.cos.
 
 点击顶部的 *Project* 标签，主页面将切换至项目管理器。点击页面右上角的 *New* 按钮打开创建项目弹窗，输入项目名称并选择合适的模版，Alaya Studio 目前提供了四个模版：
 
-- `Hello World`(Solidity)
+- `Hello World` (Solidity)
 - `Crowd Funding`
-- `Hello World`(WASM)
+- `Hello World` (WASM)
 - `Mtacoin`
 
 <p align="center">
@@ -77,8 +77,10 @@ Alaya Studio 安装包可以下载 [macOS](https://platon-assets-1303090311.cos.
 
 ### 编译智能合约项目
 
-点击工具栏的编译按钮（锤子形状），Alaya Studio 将进行项目的编译，你可以通过下方的日志查看器来查看编译结果。编译后将在项目目录下的 `build` 文件夹中生成 json 文件。
+点击工具栏的编译按钮（锤子形状），Alaya Studio 将进行项目的编译*，你可以通过下方的日志查看器来查看编译结果。编译后将在项目目录下的 `build` 文件夹中生成 json 文件。
 
 <p align="center">
   <img src="./screenshots/compile.png" width="720px">
 </p>
+
+***编译过程中需要下载 Solc 等编译工具，在国内网路环境下需要翻墙才能完成编译**
