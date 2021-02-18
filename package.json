@@ -45,7 +45,8 @@
     "prettier-plugin-solidity": "^1.0.0-alpha.54",
     "socket.io-client": "^2.3.1",
     "strip-ansi": "^6.0.0",
-    "trash": "^6.0.0"
+    "trash": "^6.0.0",
+    "web3": "PlatONnetwork/client-sdk-js#alaya-dev"
   },
   "devDependencies": {
     "@babel/plugin-proposal-class-properties": "^7.5.5",

@@ -99,6 +99,7 @@ class ContractWithProps extends Component {
       <Contract
         ref={this.page}
         network={network}
+        signer={uiState.get('signer')}
         address={this.getSelected()}
         tabs={this.getTabs()}
         starred={this.getStarred()}

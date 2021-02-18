@@ -24,7 +24,9 @@ NewProjectModal.defaultProps = {
       badge: 'Solidity',
       children: [
         { id: 'sol-helloworld', display: 'Hello World' },
+        { id: 'coin', display: 'Coin' },
         { id: 'sol-crowdfunding', display: 'Crowd Funding' },
+        { id: 'openzeppelin', display: 'Open Zeppelin' },
       ],
     },
     {
@@ -59,7 +61,7 @@ export default function (props) {
           <Route
             exact
             path='/'
-            render={() => <Redirect to='/local' />}
+            render={() => <Redirect to={`/${Auth.username || 'local'}`} />}
           />
           <CacheRoute
             exact
@@ -91,6 +93,9 @@ export default function (props) {
             cacheKey='project-editor'
             component={Project}
             className='p-relative w-100 h-100'
+          />
+          <Route
+            render={() => <CenterScreen>Invalid URL</CenterScreen>}
           />
         </CacheSwitch>
       </Suspense>
