@@ -10,9 +10,8 @@ if (platform.isDesktop) {
 
   handlers.about = () => globalModalManager.openAboutModal()
   handlers.project = {}
-  handlers.help = {}
 
-  projectActions.channel.on('ready', (action) => {
+  projectActions.channel.on('ready', (action, namespace) => {
     handlers.project[action] = projectActions[action].bind(projectActions)
   })
 

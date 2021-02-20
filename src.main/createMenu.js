@@ -102,8 +102,8 @@ module.exports = function createMenu () {
   const view = {
     label: 'View',
     submenu: [
-      { label: 'Show Command Palette', accelerator: 'CmdOrCtrl+Shift+P', click: () => ipc.send('menu-click', 'help.quickCommand') },
-      { label: 'Toggle console', accelerator: 'Ctrl+`', click: () => ipc.send('menu-click', 'help.toggleConsole') },
+      // { label: 'Show Command Palette', accelerator: 'CmdOrCtrl+Shift+P', click: () => ipc.send('menu-click', 'help.quickCommand') },
+      { label: 'Toggle console', accelerator: 'Ctrl+`', click: () => ipc.send('menu-click', 'project.toggleTerminal') },
       { type: 'separator' },
       { label: 'Increase Font Size', role: 'zoomin' },
       { label: 'Decrease Font Size', role: 'zoomout' },
