@@ -2,12 +2,19 @@ import get from 'lodash/get'
 
 import platform from '@obsidians/platform'
 import { globalModalManager } from '@obsidians/global'
+import { actions as projectActions } from '@obsidians/workspace'
 
 const handlers = {}
 if (platform.isDesktop) {
   const { ipcRenderer } = window.require('electron')
 
   handlers.about = () => globalModalManager.openAboutModal()
+  handlers.project = {}
+  handlers.help = {}
+
+  projectActions.channel.on('ready', (action) => {
+    handlers.project[action] = projectActions[action].bind(projectActions)
+  })
 
   ipcRenderer.on('menu-click', (event, action) => {
     const handler = get(handlers, action)
