@@ -11,7 +11,8 @@ if (platform.isDesktop) {
   handlers.about = () => globalModalManager.openAboutModal()
   handlers.project = {}
 
-  projectActions.channel.on('ready', (action, namespace) => {
+  const actions = ['newProject', 'openProject', 'newFile', 'newFolder', 'openTerminal']
+  actions.forEach(action => {
     handlers.project[action] = projectActions[action].bind(projectActions)
   })
 

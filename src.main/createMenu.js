@@ -86,9 +86,7 @@ module.exports = function createMenu () {
   const edit = {
     label: 'Edit',
     submenu: [
-      { label: 'Undo', accelerator: 'CmdOrCtrl+Z', click () {
-        console.log('Redo');
-      }},
+      { label: 'Undo', accelerator: 'CmdOrCtrl+Z' },
       { role: 'redo' },
       { type: 'separator' },
       { role: 'cut' },
@@ -103,7 +101,7 @@ module.exports = function createMenu () {
     label: 'View',
     submenu: [
       // { label: 'Show Command Palette', accelerator: 'CmdOrCtrl+Shift+P', click: () => ipc.send('menu-click', 'help.quickCommand') },
-      { label: 'Toggle console', accelerator: 'Ctrl+`', click: () => ipc.send('menu-click', 'project.toggleTerminal') },
+      { label: 'Open Console', accelerator: 'Ctrl+`', click: () => ipc.send('menu-click', 'project.openTerminal') },
       { type: 'separator' },
       { label: 'Increase Font Size', role: 'zoomin' },
       { label: 'Decrease Font Size', role: 'zoomout' },
