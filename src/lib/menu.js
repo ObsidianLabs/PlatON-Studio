@@ -11,7 +11,19 @@ if (platform.isDesktop) {
   handlers.about = () => globalModalManager.openAboutModal()
   handlers.project = {}
 
-  const actions = ['newProject', 'openProject', 'newFile', 'newFolder', 'openTerminal']
+  const actions = [
+    'newProject',
+    'openProject',
+    'newFile',
+    'newFolder',
+    'save',
+    'openTerminal',
+    'redo',
+    'undo',
+    'delete',
+    'selectAll',
+  ]
+  
   actions.forEach(action => {
     handlers.project[action] = projectActions[action].bind(projectActions)
   })

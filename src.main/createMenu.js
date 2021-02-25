@@ -86,14 +86,29 @@ module.exports = function createMenu () {
   const edit = {
     label: 'Edit',
     submenu: [
-      { label: 'Undo', accelerator: 'CmdOrCtrl+Z' },
-      { role: 'redo' },
+      {
+        label: 'Undo',
+        accelerator: 'CmdOrCtrl+Z',
+        click: () => ipc.send('menu-click', 'project.undo')
+      },
+      {
+        label: 'Redo',
+        accelerator: 'CmdOrCtrl+Shift+Z',
+        click: () => ipc.send('menu-click', 'project.redo')
+      },
       { type: 'separator' },
       { role: 'cut' },
       { role: 'copy' },
       { role: 'paste' },
-      { role: 'delete' },
-      { role: 'selectall' }
+      {
+        label: 'Delete',
+        click: () => ipc.send('menu-click', 'project.delete')
+      },
+      {
+        label: 'Select All',
+        accelerator: 'CmdOrCtrl+A',
+        click: () => ipc.send('menu-click', 'project.selectAll')
+      }
     ]
   }
 
