@@ -56,7 +56,7 @@ module.exports = function createMenu () {
       },
       {
         label: 'New Folder...',
-        accelerator: 'CmdOrCtrl+Shift+N',
+        accelerator: 'CmdOrCtrl+Option+N',
         click: () => ipc.send('menu-click', 'project.newFolder')
       },
       // {
