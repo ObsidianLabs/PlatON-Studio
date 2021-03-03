@@ -17964,9 +17964,9 @@ wcwidth@^1.0.0, wcwidth@^1.0.1:
   dependencies:
     defaults "^1.0.3"
 
-web3@PlatONnetwork/client-sdk-js#alaya-dev:
+web3@ObsidianLabs/platon-client-sdk-js#alaya-dev:
   version "1.2.4"
-  resolved "https://codeload.github.com/PlatONnetwork/client-sdk-js/tar.gz/ac9f2009a47712e63ce70dd3bc413a36c9223c8b"
+  resolved "https://codeload.github.com/ObsidianLabs/platon-client-sdk-js/tar.gz/874a637a6b33a88f8c5e458b9912dd41e897a46b"
   dependencies:
     bech32 "^1.1.4"
 
