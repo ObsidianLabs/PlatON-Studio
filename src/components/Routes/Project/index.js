@@ -2,7 +2,17 @@ import React, { PureComponent } from 'react'
 
 import platform from '@obsidians/platform'
 import { connect } from '@obsidians/redux'
-import Project from '@obsidians/project'
+import Project, { ProjectSettingsTab } from '@obsidians/project'
+
+import ProjectManager from './ProjectManager'
+
+ProjectSettingsTab.defaultProps = {
+  noSolc: true,
+  languages: [
+    { key: 'solidity', text: 'Solidity' },
+    { key: 'cpp', text: 'C++' },
+  ]
+}
 
 class ProjectWithProps extends PureComponent {
   async componentDidMount () {
@@ -32,6 +42,7 @@ class ProjectWithProps extends PureComponent {
     return (
       <Project
         theme='obsidians'
+        ProjectManager={ProjectManager}
         projectRoot={projectRoot}
         type={type}
         signer={uiState.get('signer')}
