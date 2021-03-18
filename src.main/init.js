@@ -1,7 +1,7 @@
 const { IpcChannel } = require('@obsidians/ipc')
 const KeypairManager = require('@obsidians/keypair')
 const { AutoUpdate } = require('@obsidians/global')
-const CompilerManager = require('@obsidians/eth-compiler')
+const CompilerManager = require('@obsidians/platon-compiler')
 const { InstanceManager } = require('@obsidians/platon-network')
 const ProjectChannel = require('@obsidians/platon-project')
 const AuthChannel = require('@obsidians/auth')
