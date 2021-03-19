@@ -24,9 +24,9 @@ NewProjectModal.defaultProps = {
       badge: 'Solidity',
       children: [
         { id: 'sol-helloworld', display: 'Hello World' },
-        { id: 'coin', display: 'Coin' },
+        // { id: 'coin', display: 'Coin' },
         { id: 'sol-crowdfunding', display: 'Crowd Funding' },
-        { id: 'openzeppelin', display: 'Open Zeppelin' },
+        // { id: 'openzeppelin', display: 'Open Zeppelin' },
       ],
     },
     {
@@ -36,13 +36,13 @@ NewProjectModal.defaultProps = {
         { id: 'wasm-helloworld', display: 'Hello World' },
       ],
     },
-    {
-      group: `${process.env.COMPILER_NAME}`,
-      badge: `${process.env.COMPILER_NAME}`,
-      children: [
-        { id: 'metacoin', display: 'Metacoin' },
-      ],
-    },
+    // {
+    //   group: `${process.env.COMPILER_NAME}`,
+    //   badge: `${process.env.COMPILER_NAME}`,
+    //   children: [
+    //     { id: 'metacoin', display: 'Metacoin' },
+    //   ],
+    // },
   ]
 }
 
