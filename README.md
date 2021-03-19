@@ -62,12 +62,14 @@ Alaya Studio 安装包可以下载 [macOS](https://platon-assets-1303090311.cos.
 
 ### 创建智能合约项目
 
-点击顶部的 *Project* 标签，主页面将切换至项目管理器。点击页面右上角的 *New* 按钮打开创建项目弹窗，输入项目名称并选择合适的模版，Alaya Studio 目前提供了四个模版：
+点击顶部的 *Project* 标签，主页面将切换至项目管理器。点击页面右上角的 *New* 按钮打开创建项目弹窗，输入项目名称并选择合适的模版，Alaya Studio 目前提供了多个模版：
 
 - `Hello World` (Solidity)
-- `Crowd Funding`
+- `Coin` (Solidity)
+- `Crowd Funding` (Solidity)
+- `Open Zeppelin` (Solidity)
 - `Hello World` (WASM)
-- `Mtacoin`
+- `Mtacoin` (Alaya Truffle)
 
 <p align="center">
   <img src="./screenshots/create_project.png" width="720px">
@@ -83,4 +85,12 @@ Alaya Studio 安装包可以下载 [macOS](https://platon-assets-1303090311.cos.
   <img src="./screenshots/compile.png" width="720px">
 </p>
 
-***编译过程中需要下载 Solc 等编译工具，在国内网路环境下需要翻墙才能完成编译**
+***编译过程中需要下载 Solc 等编译工具，在国内网路环境下可能需要使用网络代理才能完成编译**
+
+### 部署智能合约项目
+
+点击工具栏的部署按钮（船形状），部署参数窗口将被打开，在这里可以输入部署合约的名称、构造函数的参数、交易签名者和合约账号。
+
+<p align="center">
+  <img src="./screenshots/deploy_parameters.png" width="720px">
+</p>
