@@ -65,11 +65,8 @@ Alaya Studio 安装包可以下载 [macOS](https://platon-assets-1303090311.cos.
 点击顶部的 *Project* 标签，主页面将切换至项目管理器。点击页面右上角的 *New* 按钮打开创建项目弹窗，输入项目名称并选择合适的模版，Alaya Studio 目前提供了多个模版：
 
 - `Hello World` (Solidity)
-- `Coin` (Solidity)
 - `Crowd Funding` (Solidity)
-- `Open Zeppelin` (Solidity)
 - `Hello World` (WASM)
-- `Mtacoin` (Alaya Truffle)
 
 <p align="center">
   <img src="./screenshots/create_project.png" width="720px">
@@ -93,4 +90,33 @@ Alaya Studio 安装包可以下载 [macOS](https://platon-assets-1303090311.cos.
 
 <p align="center">
   <img src="./screenshots/deploy_parameters.png" width="720px">
+</p>
+
+点击 *Deploy* 按钮 A la ya Studio 将进行项目部署，部署结果将会弹窗显示。
+
+<p align="center">
+  <img src="./screenshots/deploy.png" width="720px">
+</p>
+
+### 调用合约
+
+成功部署智能合约后，点击弹窗中点击 *contract* 旁的地址，主页面将切换至合约浏览器，Alaya Studio 将自动打开刚才部署完成的智能合约。
+
+合约浏览器页面主要分为两个部分：
+
+- 左边为合约的调用方法，点击左半部分的左上角蓝色按钮弹出的下拉框显示当前合约所定义的方法，点击方法名称可以切换调用的方法。
+- 右边为合约的数据读取，点击右半部分的左上角蓝色按钮弹出的下拉框显示当前合约的数据表，点击表名称可以切换查看不同表中的数据。
+
+Alaya Studio 会自动读取合约 ABI 中的 functions，并为每个 function 生成参数表单。用户可以简单的选择要调用的 function，输入参数，选择签名者（需要为 keypair manager 中存在的地址；读操作不需选择），并点击运行按钮进行合约调用。调用结果（成功或失败）将显示在下方的 result 栏中。
+
+<p align="center">
+  <img src="./screenshots/contract.png" width="720px">
+</p>
+
+接下来我们调用部署好的合约 `HelloWorld`。选择 *setName* 方法，在 *Parameters* 下填入 *_name*，如 填入`Hello Alaya`。点击 *estimate* 按钮，Alaya Studio 会自动估算这笔交易所需要的手续费。Alaya Studio 会自动选择 *Authorization* 地址，你也可以根据需要选择不同的地址。点击点击上方的执行按钮开始调用 *setName* 方法并发送交易。
+
+在右边选择 *getName* 方法，点击执行按钮便可以在下方 *Result* 中看到刚刚设置的 `Hello Alaya` 了。
+
+<p align="center">
+  <img src="./screenshots/hello.png" width="720px">
 </p>
