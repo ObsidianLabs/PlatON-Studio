@@ -8,7 +8,8 @@ function makeProjectManager (Base) {
     async deploy (contractPath) {
       contractPath = contractPath || await this.getDefaultContract()
       if (contractPath && contractPath.endsWith('.wasm')) {
-        const contractName = fileOps.current.path.parse(contractPath).name
+        const abiPath = contractPath.replace('.wasm', '.abi.json')
+        const abiName = fileOps.current.path.parse(abiPath).base
 
         let bytecode
         try {
@@ -18,36 +19,35 @@ function makeProjectManager (Base) {
           return
         }
 
-        let contractAbi
-        try {
-          contractAbi = await this.readContractJson(contractPath.replace('.wasm', '.abi.json'))
-        } catch (e) {
-          notification.error('Deploy Error', e.message)
-          return
-        }
-
-        const contractObj = {
-          contractName,
-          abi: contractAbi,
-          bytecode,
-          vmType: 1,
-        }
-
-        let constructorAbi
-        try {
-          constructorAbi = await this.getConstructorAbi(contractAbi, { key: 'name', value: 'init' })
-        } catch (e) {
-          notification.error('Deploy Error', e.message)
-          return
-        }
-        constructorAbi.inputs = constructorAbi.input
-
-        this.deployButton.getDeploymentParameters(constructorAbi, contractObj.contractName || contractName,
-          allParameters => this.pushDeployment(contractObj, allParameters),
-          allParameters => this.estimate(contractObj, allParameters)
+        this.deployButton.getDeploymentParameters({
+          contractPath: abiPath,
+          contracts: [abiName],
+          getConstructorAbiArgs: contractObj => [
+            contractObj.map(item => {
+              return {
+                ...item,
+                inputs: item.input,
+                type: item.type === 'Action' ? 'function' : '',
+                stateMutability: item.constant ? 'view' : ''
+              }
+            }),
+            { key: 'name', value: 'init' }
+          ]
+        },
+          (abi, allParameters) => this.pushDeployment(this.buildContractObj(allParameters.contractName, abi, bytecode), allParameters),
+          (abi, allParameters) => this.estimate(this.buildContractObj(allParameters.contractName, abi, bytecode), allParameters)
         )
       } else {
         return await super.deploy(contractPath)
+      }
+    }
+
+    buildContractObj (contractName, abi, bytecode) {
+      return {
+        contractName,
+        abi,
+        bytecode,
+        vmType: 1,
       }
     }
 
