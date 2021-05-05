@@ -4,6 +4,7 @@ import { connect } from '@obsidians/redux'
 import BottomBar from '@obsidians/bottombar'
 
 function BottomBarWithProps ({ network, queue, uiState }) {
+  const localNetwork = uiState.get('localNetwork')
   let txs
   if (network !== 'dev') {
     txs = queue.getIn([network, 'txs'])
