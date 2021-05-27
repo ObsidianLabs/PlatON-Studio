@@ -18,9 +18,9 @@ PlatON Studio 安装包可以下载 [macOS](https://app.obsidians.io/platon/mac)
 
 ## 功能预览
 
-PlatON Studio 已经支持[Alaya](https://alaya.network) 网络上的合约开发，部署和调试。[Alaya](https://alaya.network) 既是PlatON的先行试验区，同时Alaya又是独立的。Alaya主要面向交易和事务，PlatON主要面向数据。PlatON定位于全球领导性的隐私AI网络，聚焦于服务数据资产+模型算法+算力交易平台；是从认知到决策阶段数据要素资产化的完整生态；Alaya定位于全球领先的金融公链，凭借我们的技术和运营优势，来重新构造区块链的DeFi应用体系。
+PlatON Studio 已经支持 [Alaya](https://alaya.network) 网络上的合约开发，部署和调试。[Alaya](https://alaya.network) 既是PlatON的先行试验区，同时Alaya又是独立的。Alaya主要面向交易和事务，而 PlatON 则主要面向数据。PlatON 定位于全球领导性的隐私AI网络，聚焦于服务数据资产+模型算法+算力交易平台；是从认知到决策阶段数据要素资产化的完整生态；Alaya定位于全球领先的金融公链，凭借我们的技术和运营优势，来重新构造区块链的 DeFi 应用体系。
 
-PlatON Studio 将于近期更新支持PlatON网络上的合约开发，敬请期待。
+PlatON Studio 将于近期更新支持 PlatON 网络的合约开发，敬请期待。
 
 ### 准备工作
 
