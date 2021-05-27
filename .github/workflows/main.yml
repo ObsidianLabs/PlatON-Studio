@@ -13,7 +13,7 @@ env:
   eth_components: eth-components
   project_build: eth
   project_project: platon
-  project_name: Alaya Studio
+  project_name: PlatON Studio
   project_build_script: yarn && yarn dist
   os_matrix: '[\"macos-latest\", \"ubuntu-18.04\", \"windows-2019\"]'
   enable_auth: false

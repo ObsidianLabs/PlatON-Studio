@@ -120,8 +120,8 @@
     ]
   },
   "build": {
-    "productName": "Alaya Studio",
-    "artifactName": "AlayaStudio-${version}.${ext}",
+    "productName": "PlatON Studio",
+    "artifactName": "PlatON-Studio-${version}.${ext}",
     "files": [
       "build/**/*",
       "node_modules/**/*"
@@ -136,7 +136,7 @@
       "buildResources": "assets"
     },
     "mac": {
-      "appId": "com.obsidians.alayastudio",
+      "appId": "com.obsidians.platonstudio",
       "category": "developer-tools",
       "target": {
         "target": "default",
