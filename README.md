@@ -30,8 +30,8 @@ Alaya 既是 PlatON 的先行试验区，同时 Alaya 又是独立的公链网�
   <img src="./screenshots/welcome.png" width="720px">
 </p>
 
-- PlatON Studio 使用 [**Docker**](https://www.docker.com/) 来启动 PlatON 节点和进行项目编译。如果你之前没有安装过 Docker，可以点击 *Install Docker* 按钮访问 Docker 官方网站并进行下载安装。
-- **Alaya Node in Docker** Alaya 节点镜像，PlatON Studio 使用这个镜像来运行 Alaya 节点以及项目编译
+- PlatON Studio 使用 [**Docker**](https://www.docker.com/) 来启动 PlatON 节点和进行项目编译。如果你之前没有安装过 Docker，可以点击 *Install Docker* 按钮访问 Docker 官方网站并进行下载安装；
+- **Alaya Node in Docker** 是 Alaya 节点镜像，PlatON Studio 使用这个镜像来运行 Alaya 节点；
 - **Alaya Truffle in Docker** 是 Alaya 版本的 Truffle。PlatON Studio 使用这个工具包进行项目的创建和编译。
 
 当所有依赖都正确安装并运行后，灰色的 *Skip* 按钮将会变成绿色的 *Get Started* 按钮。点击这个按钮进入 PlatON Studio 的主界面。
@@ -44,13 +44,13 @@ Alaya 既是 PlatON 的先行试验区，同时 Alaya 又是独立的公链网�
   <img src="./screenshots/keypairs.png" width="480px">
 </p>
 
-你可以在密钥管理器中创建、导入并管理密钥对。在创建和编辑密钥对的时候，你可以为该密钥对设置别名，方便在后续的使用中进行识别。密钥管理器除了对密钥对进行储存管理外，还将为创世区块提供创世地址。创建新的 PlatON 节点实例时，会使用密钥管理器里所有的地址作为创世地址。
+你可以在密钥管理器中创建、导入并管理密钥对。在创建和编辑密钥对的时候，你可以为该密钥对设置别名，方便在后续的使用中进行识别。密钥管理器除了对密钥对进行储存管理外，还将为创世区块提供创世地址。创建新的本地节点实例时，会使用密钥管理器里所有的地址作为创世地址。
 
 **在继续之前，请先在密钥管理器中创建一些密钥对，作为接下来创建节点实例的创世地址。**
 
 ### 启动节点
 
-点击顶部的 *Network* 标签，主页面将切换为网络管理器。在网络管理器中，我们可以进行 PlatON 节点版本和节点实例的管理，包括下载、删除 PlatON 节点版本，根据不同版本创建、删除和运行节点实例。
+点击顶部的 *Network* 标签，主页面将切换为网络管理器。在网络管理器中，我们可以进行本地节点版本和节点实例的管理，包括下载、删除本地节点版本，根据不同版本创建、删除和运行节点实例。
 
 点击主页面中右上角的 *New Instance* 按钮打开创建新实例的弹窗，填写实例名称和选择合适的版本，点击 *Create* 按钮完成节点实例的创建。创建节点实例时间比较长 可能需要等待 1 - 2 分钟。
 
@@ -58,7 +58,7 @@ Alaya 既是 PlatON 的先行试验区，同时 Alaya 又是独立的公链网�
   <img src="./screenshots/new_instance.png" width="720px">
 </p>
 
-节点实例创建完成后，实例列表将显示刚刚创建好的实例，点击实例的绿色 *Start* 按钮启动 PlatON 节点。启动完成后，你可以在下方的日志查看器中检查节点运行日志。
+节点实例创建完成后，实例列表将显示刚刚创建好的实例，点击实例的绿色 *Start* 按钮启动本地节点。启动完成后，你可以在下方的日志查看器中检查节点运行日志。
 
 <p align="center">
   <img src="./screenshots/node_log.png" width="720px">
@@ -96,7 +96,7 @@ Alaya 既是 PlatON 的先行试验区，同时 Alaya 又是独立的公链网�
   <img src="./screenshots/deploy_parameters.png" width="720px">
 </p>
 
-点击 *Deploy* 按钮 A la ya Studio 将进行项目部署，部署结果将会弹窗显示。
+点击 *Deploy* 按钮，PlatON Studio 将进行项目部署，部署结果将会弹窗显示。
 
 <p align="center">
   <img src="./screenshots/deploy.png" width="720px">
