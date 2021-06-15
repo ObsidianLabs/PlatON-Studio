@@ -34,6 +34,7 @@ NewProjectModal.defaultProps = {
       badge: 'WASM',
       children: [
         { id: 'wasm-helloworld', display: 'Hello World' },
+        { id: 'wasm-token', display: 'Standard Token (ERC20)' },
       ],
     },
     // {
