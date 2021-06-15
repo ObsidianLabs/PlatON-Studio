@@ -1,6 +1,11 @@
 import redux from '@obsidians/redux'
 import { ContractPage } from '@obsidians/contract'
 
+const types = {
+  Action: 'function',
+  Event: 'event',
+}
+
 export default class PlatonContractPage extends ContractPage {
   getAbiData (codeHash) {
     const abiData = redux.getState().abis.get(codeHash)?.toJS()
@@ -17,7 +22,7 @@ export default class PlatonContractPage extends ContractPage {
         return {
           ...item,
           inputs: item.input,
-          type: item.type === 'Action' ? 'function' : '',
+          type: types[item.type],
           stateMutability: item.constant ? 'view' : ''
         }
       })
