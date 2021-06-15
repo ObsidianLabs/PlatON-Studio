@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react'
 
 import platform from '@obsidians/platform'
 import { connect } from '@obsidians/redux'
-import Project, { ProjectSettingsTab } from '@obsidians/project'
+import Project, { ProjectSettingsTab, DeployButton } from '@obsidians/project'
 
 import ProjectManager from './ProjectManager'
 
@@ -12,6 +12,10 @@ ProjectSettingsTab.defaultProps = {
     { key: 'solidity', text: 'Solidity' },
     { key: 'cpp', text: 'C++' },
   ]
+}
+
+DeployButton.defaultProps = {
+  skipEstimate: true,
 }
 
 class ProjectWithProps extends PureComponent {
