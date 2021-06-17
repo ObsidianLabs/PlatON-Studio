@@ -11,6 +11,11 @@ import { List } from 'immutable'
 
 const networkList = List(networks)
 
+const prefix = {
+  dev: 'atx',
+  alaya: 'atp',
+}
+
 class HeaderWithRedux extends PureComponent {
   componentDidMount () {
     actions.history = this.props.history
@@ -53,6 +58,8 @@ class HeaderWithRedux extends PureComponent {
     const selectedContract = contracts.getIn([network, 'selected']) || ''
     const selectedAccount = accounts.getIn([network, 'selected']) || ''
 
+    const keypairManagerFilter = k => k.id.startsWith(prefix[network])
+
     return (
       <Header
         profile={profile}
@@ -62,6 +69,7 @@ class HeaderWithRedux extends PureComponent {
         selectedAccount={selectedAccount}
         starred={starred}
         starredContracts={starredContracts}
+        keypairManagerFilter={keypairManagerFilter}
         browserAccounts={browserAccounts}
         network={selectedNetwork}
         networkList={groupedNetworks}
