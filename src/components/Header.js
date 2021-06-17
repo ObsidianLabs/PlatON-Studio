@@ -13,7 +13,10 @@ const networkList = List(networks)
 
 const prefix = {
   dev: 'atx',
+  'alaya-devnet': 'atp',
   alaya: 'atp',
+  'platon-devnet': 'lat',
+  platon: 'lat',
 }
 
 class HeaderWithRedux extends PureComponent {
