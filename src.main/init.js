@@ -4,6 +4,7 @@ const { AutoUpdate } = require('@obsidians/global')
 const CompilerManager = require('@obsidians/platon-compiler')
 const { InstanceManager } = require('@obsidians/platon-network')
 const ProjectChannel = require('@obsidians/platon-project')
+const SdkChannel = require('@obsidians/platon-sdk')
 const AuthChannel = require('@obsidians/auth')
 
 let ipcChannel, keypairManager, autoUpdate, compilerManager, instanceManager, projectChannel, authChannel
@@ -14,5 +15,6 @@ module.exports = function () {
   compilerManager = new CompilerManager()
   instanceManager = new InstanceManager()
   projectChannel = new ProjectChannel()
+  sdkChannel = new SdkChannel()
   authChannel = new AuthChannel()
 }
