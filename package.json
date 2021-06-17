@@ -44,8 +44,7 @@
     "prettier-plugin-solidity": "1.0.0-beta.10",
     "socket.io-client": "^2.4.0",
     "strip-ansi": "^6.0.0",
-    "trash": "^7.0.0",
-    "web3": "ObsidianLabs/platon-client-sdk-js#alaya-dev"
+    "trash": "^7.0.0"
   },
   "devDependencies": {
     "@babel/plugin-proposal-class-properties": "^7.5.5",
@@ -73,7 +72,6 @@
     "electron-updater": "^4.3.8",
     "immutable": "^4.0.0-rc.12",
     "jsbi": "^3.1.1",
-    "lerna": "^3.22.1",
     "loadjs": "^4.2.0",
     "lodash": "^4.17.14",
     "moment": "^2.29.1",
