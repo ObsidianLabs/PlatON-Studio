@@ -6,6 +6,7 @@ import { networks } from '@obsidians/sdk'
 import headerActions, { Header, NavGuard } from '@obsidians/header'
 import { networkManager } from '@obsidians/network'
 import { actions } from '@obsidians/workspace'
+import { KeypairInputSelector } from '@obsidians/keypair'
 
 import { List } from 'immutable'
 
@@ -27,6 +28,15 @@ class HeaderWithRedux extends PureComponent {
       networkManager.setNetwork(networkList.get(0))
     }
     this.navGuard = new NavGuard(this.props.history)
+  }
+
+  componentDidUpdate (props) {
+    if (this.props.network !== props.network) {
+      const network = this.props.network
+      KeypairInputSelector.defaultProps = {
+        filter: k => k.address?.startsWith(prefix[network] || '0x')
+      }
+    }
   }
 
   groupedNetworks = networksByGroup => {
