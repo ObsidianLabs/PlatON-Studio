@@ -5,22 +5,25 @@ import { ProjectManager } from '@obsidians/project'
 
 function makeProjectManager (Base) {
   return class PlatonProjectManager extends Base {
-    async deploy (contractPath) {
-      contractPath = contractPath || await this.getDefaultContract()
-      if (contractPath && contractPath.endsWith('.wasm')) {
-        const abiPath = contractPath.replace('.wasm', '.abi.json')
+    async deploy (contractFileNode) {
+      contractFileNode = contractFileNode || await this.getDefaultContractFileNode()
+      if (contractFileNode?.path?.endsWith('.wasm')) {
+        const abiPath = contractFileNode.path.replace('.wasm', '.abi.json')
         const abiName = fileOps.current.path.parse(abiPath).base
 
         let bytecode
         try {
-          bytecode = await fileOps.current.readFile(contractPath, 'hex')
+          bytecode = await fileOps.current.readFile(contractFileNode.path, 'hex')
         } catch (e) {
           notification.error('Deploy Error', e.message)
           return
         }
 
         this.deployButton.getDeploymentParameters({
-          contractPath: abiPath,
+          contractFileNode: {
+            path: abiPath,
+            pathInProject: contractFileNode.pathInProject,
+          },
           contracts: [abiName],
           getConstructorAbiArgs: contractObj => [
             contractObj.map(item => {
@@ -38,7 +41,7 @@ function makeProjectManager (Base) {
           (abi, allParameters) => this.estimate(this.buildContractObj(allParameters.contractName, abi, bytecode), allParameters)
         )
       } else {
-        return await super.deploy(contractPath)
+        return await super.deploy(contractFileNode)
       }
     }
 
