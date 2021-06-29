@@ -81,7 +81,7 @@ const overrides = [
     CHAIN_SHORT_NAME: '"Alaya"',
     CHAIN_EXECUTABLE_NAME: '"Alaya Node"',
     CHAIN_EXECUTABLE_NAME_IN_LABEL: '"Alaya node"',
-    TOKEN_SYMBOL: '"ATP"',
+    TOKEN_SYMBOL: `function (n) { return n && n.startsWith('platon') ? 'LAT' : 'ATP' }`,
     COMPILER_NAME: '"Alaya Truffle"',
     COMPILER_NAME_IN_LABEL: '"Alaya truffle"',
     COMPILER_EXECUTABLE_NAME: '"alaya-truffle"',
