@@ -1,7 +1,7 @@
 {
   "name": "platon-studio",
   "description": "Graphic IDE for PlatON smart contract development",
-  "version": "0.5.0",
+  "version": "0.6.0-rc.1",
   "author": {
     "name": "Phil Li",
     "email": "phil.li@obsidians.io",
