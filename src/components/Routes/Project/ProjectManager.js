@@ -5,6 +5,17 @@ import { ProjectManager } from '@obsidians/project'
 
 function makeProjectManager (Base) {
   return class PlatonProjectManager extends Base {
+    async readProjectAbis () {
+      const projectAbis = await super.readProjectAbis()
+      if (this.projectSettings?.settings?.language === 'cpp') {
+        return projectAbis.map(item => ({
+          ...item,
+          abi: item.content,
+        }))
+      }
+      return projectAbis
+    }
+
     async deploy (contractFileNode) {
       contractFileNode = contractFileNode || await this.getDefaultContractFileNode()
       if (contractFileNode?.path?.endsWith('.wasm')) {
