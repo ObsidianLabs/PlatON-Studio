@@ -3,15 +3,10 @@
 PlatON Studio 是一个帮助开发者快速开发 [PlatON](https://www.platon.network/) 智能合约的集成化开发环境。
 
 ![](./screenshots/compile.png)
-## 网页端
-
-可以在https://conflux.ide.black/访问网页端，或者在右上角账户处快速访问。通过创建账户并登陆，最新版本的Conflux Studio已经支持网页端和客户端IDE项目文件互通。
-
-Web端特别支持了Conflux 官方浏览器插件钱包 Conflux Portal，如果浏览器环境中已经存在Conflux Portal，Conflux Studio会自动是识别并链接Conflux Portal, 并允许Conflux Portal管理网络节点与密钥。进行支付相关操作的时候，Conflux Studio亦会链接到Conflux Portal来进行支付许可。
 
 ### 秘钥管理更新
 
-新版本的conflux studio支持对不同网络储存分网络的秘钥对，在切换到相应网络的时候会显示储存的该网络秘钥。
+新版本的 PlatON Studio 支持对不同网络储存分网络的秘钥对，在切换到相应网络的时候会显示储存的该网络秘钥。
 现在除了直接用密钥文件导入之外，也支持用助记词创建/导入秘钥。
 
 ### 自定义网络
