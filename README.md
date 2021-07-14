@@ -144,8 +144,8 @@ PlatON Studio 会自动读取合约 ABI 中的 functions，并为每个 function
 ### 查询事件
 在Contract浏览器里，可以查询发生的事件。可以指定查询若干指定区块内的事件，如果不填默认最近10000个。在右侧又clear键可以删掉填写值。
 
-### Gas Price
-目前在估算所需燃气的时候会同时估计燃气费
+### 功能更新 - 新增 Gas Price 估算
+目前在估算所需燃气的时候会同时估计燃气费。
 <p align="center">
   <img src="./screenshots/estimate_gas.png" width="720px">
 </p>
