@@ -4,42 +4,6 @@ PlatON Studio 是一个帮助开发者快速开发 [PlatON](https://www.platon.n
 
 ![](./screenshots/compile.png)
 
-### 秘钥管理更新
-
-新版本的 PlatON Studio 支持对不同网络储存分网络的秘钥对，在切换到相应网络的时候会显示储存的该网络秘钥。
-现在除了直接用密钥文件导入之外，也支持用助记词创建/导入秘钥。
-
-### 自定义网络
-
-最新版的Conflux Studio 桌面版IDE已支持自定义网络。用户可以通过Node RPC的url来连接到指定自定义节点。
-
-### 编译器版本
-
-在代码页面右下角可以直接选取Truffle和Solc的版本。如果没有的话会先执行下载操作，然后再进行编译和部署。由于使用浏览器环境中运行的Solc编译器，所以Conflux Studio进行编译时,无需再使用docker存储编译器的镜像。
-
-### 自定义TOKEN (主网功能)
-#### 自动显示全部CRC-20 token 
-
-在Explorer页面里，输入合约地址，如果该合约是一个Token，那么会显示该Token的相关信息，包括Token类型，名称，符号，总量等。
-
-#### 指定CRC-20 token进行交易
-最新版本内Explorer页面中支持使用合约中的任意一种CRC-20 token发起交易。
-
-### 查询事件
-在Contract浏览器里，可以查询发生的事件。可以指定查询若干指定区块内的事件，如果不填默认最近10000个。在右侧又clear键可以删掉填写值。
-
-### Gas Price
-目前在估算所需燃气的时候会同时估计燃气费
-
-### RPC Client
-最新版本的Conflux Studio提供RPC Client功能，允许用户从底层调用Conflux RPC接口以验证公链接口调用过程。 
-
-### ABI storage
-可以在ABI storage里面手动加入新的ABI
-
-### 模板
-目前支持OPEN ZEPPLEIN和自有模板 ERC20，ERC721，ERC777等模板
-
 ## 安装
 
 ### 下载
@@ -54,7 +18,7 @@ PlatON Studio 安装包可以下载 [macOS](https://app.obsidians.io/platon/mac)
 
 ## 功能预览
 
-PlatON Studio 已经支持 [Alaya](https://alaya.network) 网络上的合约开发、部署和调试，在后续版本更新中支持 PlatON 网络后，将会支持一键切换两个网络。
+PlatON Studio 现已支持 [Alaya](https://alaya.network) 和[PlatON](https://platon.network) 网络上的合约开发、部署和调试，并支持在两个网络间一键切换。
 
 Alaya 既是 PlatON 的先行试验区，同时 Alaya 又是独立的公链网络。Alaya 主要面向交易和事务，而 PlatON 则主要面向数据。PlatON 定位于全球领导性的隐私AI网络，聚焦于服务数据资产+模型算法+算力交易平台；是从认知到决策阶段数据要素资产化的完整生态；Alaya定位于全球领先的金融公链，凭借技术和运营优势，来重新构造区块链的 DeFi 应用体系。
 
@@ -82,12 +46,20 @@ Alaya 既是 PlatON 的先行试验区，同时 Alaya 又是独立的公链网�
 
 你可以在密钥管理器中创建、导入并管理密钥对。在创建和编辑密钥对的时候，你可以为该密钥对设置别名，方便在后续的使用中进行识别。密钥管理器除了对密钥对进行储存管理外，还将为创世区块提供创世地址。创建新的本地节点实例时，会使用密钥管理器里所有的地址作为创世地址。
 
+### 秘钥管理更新 - 分网络显示密钥对
+
+新版本的 PlatON Studio 支持对不同网络储存分网络的秘钥对，在切换到相应网络的时候会显示储存的该网络秘钥。
+现在除了直接用密钥文件导入之外，也支持用助记词创建/导入秘钥。
+
 **在继续之前，请先在密钥管理器中创建一些密钥对，作为接下来创建节点实例的创世地址。**
+
+### 网络管理更新 - 现已支持 PlatON 和 Alaya 网络
+
+最新版的 PlatON Studio 桌面版IDE现已内置 PlatON 和 Alaya 网络支持。
 
 ### 启动节点
 
 点击顶部的 *Network* 标签，主页面将切换为网络管理器。在网络管理器中，我们可以进行本地节点版本和节点实例的管理，包括下载、删除本地节点版本，根据不同版本创建、删除和运行节点实例。
-
 点击主页面中右上角的 *New Instance* 按钮打开创建新实例的弹窗，填写实例名称和选择合适的版本，点击 *Create* 按钮完成节点实例的创建。创建节点实例时间比较长 可能需要等待 1 - 2 分钟。
 
 <p align="center">
@@ -138,6 +110,14 @@ Alaya 既是 PlatON 的先行试验区，同时 Alaya 又是独立的公链网�
   <img src="./screenshots/deploy.png" width="720px">
 </p>
 
+### 功能更新 - 自定义TOKEN (主网功能)
+#### 自动显示全部ERC-20 token 
+
+在Explorer页面里，输入合约地址，如果该合约是一个Token，那么会显示该Token的相关信息，包括Token类型，名称，符号，总量等。
+
+#### 指定ERC-20 token进行交易
+最新版本内Explorer页面中支持使用合约中的任意一种ERC-20 token发起交易。
+
 ### 调用合约
 
 成功部署智能合约后，点击弹窗中点击 *contract* 旁的地址，主页面将切换至合约浏览器，PlatON Studio 将自动打开刚才部署完成的智能合约。
@@ -159,4 +139,25 @@ PlatON Studio 会自动读取合约 ABI 中的 functions，并为每个 function
 
 <p align="center">
   <img src="./screenshots/hello.png" width="720px">
+</p>
+
+### 查询事件
+在Contract浏览器里，可以查询发生的事件。可以指定查询若干指定区块内的事件，如果不填默认最近10000个。在右侧又clear键可以删掉填写值。
+
+### Gas Price
+目前在估算所需燃气的时候会同时估计燃气费
+<p align="center">
+  <img src="./screenshots/estimate_gas.png" width="720px">
+</p>
+
+### 功能更新 - RPC Client
+最新版本的PlatON Studio提供RPC Client功能，允许用户从底层调用Alaya/PlatON RPC接口以验证公链接口调用过程。 
+<p align="center">
+  <img src="./screenshots/rpc_client.png" width="720px">
+</p>
+
+### 功能更新 - 导入ABI storage
+最新版本的PlatON Studio允许在ABI storage里面手动加入新的ABI。
+<p align="center">
+  <img src="./screenshots/new_abi.png" width="720px">
 </p>
