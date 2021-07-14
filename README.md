@@ -3,6 +3,47 @@
 PlatON Studio 是一个帮助开发者快速开发 [PlatON](https://www.platon.network/) 智能合约的集成化开发环境。
 
 ![](./screenshots/compile.png)
+## 网页端
+
+可以在https://conflux.ide.black/访问网页端，或者在右上角账户处快速访问。通过创建账户并登陆，最新版本的Conflux Studio已经支持网页端和客户端IDE项目文件互通。
+
+Web端特别支持了Conflux 官方浏览器插件钱包 Conflux Portal，如果浏览器环境中已经存在Conflux Portal，Conflux Studio会自动是识别并链接Conflux Portal, 并允许Conflux Portal管理网络节点与密钥。进行支付相关操作的时候，Conflux Studio亦会链接到Conflux Portal来进行支付许可。
+
+### 秘钥管理更新
+
+新版本的conflux studio支持对不同网络储存分网络的秘钥对，在切换到相应网络的时候会显示储存的该网络秘钥。
+现在除了直接用密钥文件导入之外，也支持用助记词创建/导入秘钥。
+
+### 自定义网络
+
+最新版的Conflux Studio 桌面版IDE已支持自定义网络。用户可以通过Node RPC的url来连接到指定自定义节点。
+
+### 编译器版本
+
+在代码页面右下角可以直接选取Truffle和Solc的版本。如果没有的话会先执行下载操作，然后再进行编译和部署。由于使用浏览器环境中运行的Solc编译器，所以Conflux Studio进行编译时,无需再使用docker存储编译器的镜像。
+
+### 自定义TOKEN (主网功能)
+#### 自动显示全部CRC-20 token 
+
+在Explorer页面里，输入合约地址，如果该合约是一个Token，那么会显示该Token的相关信息，包括Token类型，名称，符号，总量等。
+
+#### 指定CRC-20 token进行交易
+最新版本内Explorer页面中支持使用合约中的任意一种CRC-20 token发起交易。
+
+### 查询事件
+在Contract浏览器里，可以查询发生的事件。可以指定查询若干指定区块内的事件，如果不填默认最近10000个。在右侧又clear键可以删掉填写值。
+
+### Gas Price
+目前在估算所需燃气的时候会同时估计燃气费
+
+### RPC Client
+最新版本的Conflux Studio提供RPC Client功能，允许用户从底层调用Conflux RPC接口以验证公链接口调用过程。 
+
+### ABI storage
+可以在ABI storage里面手动加入新的ABI
+
+### 模板
+目前支持OPEN ZEPPLEIN和自有模板 ERC20，ERC721，ERC777等模板
 
 ## 安装
 
