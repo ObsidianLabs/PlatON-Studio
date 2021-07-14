@@ -110,13 +110,6 @@ Alaya 既是 PlatON 的先行试验区，同时 Alaya 又是独立的公链网�
   <img src="./screenshots/deploy.png" width="720px">
 </p>
 
-### 功能更新 - 自定义TOKEN (主网功能)
-#### 自动显示全部ERC-20 token 
-
-在Explorer页面里，输入合约地址，如果该合约是一个Token，那么会显示该Token的相关信息，包括Token类型，名称，符号，总量等。
-
-#### 指定ERC-20 token进行交易
-最新版本内Explorer页面中支持使用合约中的任意一种ERC-20 token发起交易。
 
 ### 调用合约
 
