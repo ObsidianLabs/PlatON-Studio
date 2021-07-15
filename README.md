@@ -92,7 +92,7 @@ PlatON Studio 安装包可以在 [Github Releases](https://github.com/ObsidianLa
 
 ### 编译智能合约
 
-点击工具栏的编译按钮（锤子形状），PlatON Studio 将进行项目的编译，你可以通过下方的终端来查看编译结果。编译后将在项目目录下的 `build/contracts` 文件夹中生成编译后的 JSON 文件，具体的数据格式可参见 [solc 文档](https://docs.soliditylang.org/en/v0.5.3/using-the-compiler.html#output-description)。
+点击工具栏的编译按钮（锤子形状），PlatON Studio 将进行项目的编译，你可以通过下方的终端来查看编译结果。编译后将在项目目录下的 `build/contracts` 文件夹中生成编译后的 JSON 文件，具体的数据格式可参见 [solc 文档](https://docs.soliditylang.org/en/latest/using-the-compiler.html#output-description)。
 
 编译过程中需要下载 Solc，在国内网路环境下可能需要使用网络代理才能完成编译。
 
