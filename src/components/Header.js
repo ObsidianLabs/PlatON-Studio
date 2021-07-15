@@ -69,9 +69,9 @@ class HeaderWithRedux extends PureComponent {
 
     const selectedProject = projects.get('selected')?.toJS() || {}
 
-    const networkGroups = this.state.groupBy(n => n.group)
+    const networkGroups = this.state.networkList.groupBy(n => n.group)
     const groupedNetworks = this.groupedNetworks(networkGroups)
-    const selectedNetwork = this.state.find(n => n.id === network) || {}
+    const selectedNetwork = this.state.networkList.find(n => n.id === network) || {}
 
     const browserAccounts = uiState.get('browserAccounts') || []
     const starred = accounts.getIn([network, 'accounts'])?.toJS() || []
