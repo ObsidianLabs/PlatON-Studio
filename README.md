@@ -32,7 +32,7 @@ PlatON Studio 安装包可以在 [Github Releases](https://github.com/ObsidianLa
 - **Alaya Node in Docker** 是 Alaya 节点镜像，PlatON Studio 使用这个镜像来运行 Alaya 节点；
 - **Alaya Truffle in Docker** 是 Alaya 版本的 Truffle。PlatON Studio 使用这个工具包进行项目的创建和编译。
 
-当所有依赖都正确安装并运行后，灰色的 *Skip* 按钮将会变成绿色的 *Get Started* 按钮。点击这个按钮进入 PlatON Studio 的主界面。
+当所有依赖都正确安装并运行后，灰色的 *Skip* 按钮将会变成蓝色的 *Get Started* 按钮。点击这个按钮进入 PlatON Studio 的主界面。
 
 ### 密钥管理器
 
@@ -68,9 +68,7 @@ PlatON Studio 安装包可以在 [Github Releases](https://github.com/ObsidianLa
 
 ### 区块浏览器
 
-成功启动本地节点或连接到远程网络后，点击顶部的 *Explorer* 标签，主页面将切换为区块浏览器。
-
-在 *Explorer* 标签旁的下拉菜单中，可以直接选择密钥管理器中保存的地址。或者，也可以在输入框中输入或粘贴希望访问的地址。点击回车后，我们便可以看到对应地址的余额、交易记录等信息。
+成功启动本地节点或连接到远程网络后，点击顶部的 *Explorer* 标签打开区块浏览器。在 *Explorer* 标签旁的下拉菜单中，可以直接选择密钥管理器中保存的地址。或者，也可以在输入框中输入或粘贴希望访问的地址。点击回车后，我们便可以看到对应地址的余额、交易记录等信息。
 
 <p align="center">
   <img src="./screenshots/explorer.png" width="720px">
@@ -80,7 +78,7 @@ PlatON Studio 安装包可以在 [Github Releases](https://github.com/ObsidianLa
 
 ### 创建智能合约项目
 
-点击顶部的 *Project* 标签，主页面将切换至项目管理器。点击页面右上角的 *New* 按钮打开创建项目弹窗，输入项目名称并选择合适的模版，PlatON Studio 目前提供了多个模版：
+点击顶部的 *Project* 标签，切换至合约项目界面。点击页面右上角的 *New* 按钮打开创建项目弹窗，输入项目名称并选择合适的模版，PlatON Studio 目前提供了多个模版：
 
 - [Hello World (Solidity)](https://devdocs.platon.network/docs/zh-CN/Solidity_Dev_Manual/#%E5%88%9B%E5%BB%BAhelloworld%E5%90%88%E7%BA%A6)：基于 Solidity 的一个简单的智能合约；
 - [Crowd Funding (Solidity)](https://devdocs.platon.network/docs/zh-CN/Solidity_Dev_Manual#%E4%BC%97%E7%AD%B9%E5%90%88%E7%BA%A6)：基于 Solidity 的众筹智能合约；
@@ -90,11 +88,11 @@ PlatON Studio 安装包可以在 [Github Releases](https://github.com/ObsidianLa
   <img src="./screenshots/create_project.png" width="720px">
 </p>
 
-项目创建完成后，主页面将切换至项目编辑器。项目编辑器由几个部分组成，包括了文件浏览器，代码编辑器，工具栏，日志查看器等多个开发常用模块。
+项目创建完成后，PlatON Studio 将自动在项目编辑器中打开新创建的项目。项目编辑器由几个部分组成，包括了文件浏览器，代码编辑器，工具栏，终端等多个模块。
 
 ### 编译智能合约
 
-点击工具栏的编译按钮（锤子形状），PlatON Studio 将进行项目的编译，你可以通过下方的日志查看器来查看编译结果。编译后将在项目目录下的 `build` 文件夹中生成包含编译后数据的 JSON 文件，具体的数据格式可参见 [solc 文档](https://docs.soliditylang.org/en/v0.5.3/using-the-compiler.html#output-description)。
+点击工具栏的编译按钮（锤子形状），PlatON Studio 将进行项目的编译，你可以通过下方的终端来查看编译结果。编译后将在项目目录下的 `build/contracts` 文件夹中生成编译后的 JSON 文件，具体的数据格式可参见 [solc 文档](https://docs.soliditylang.org/en/v0.5.3/using-the-compiler.html#output-description)。
 
 编译过程中需要下载 Solc，在国内网路环境下可能需要使用网络代理才能完成编译。
 
@@ -118,17 +116,17 @@ PlatON Studio 安装包可以在 [Github Releases](https://github.com/ObsidianLa
   <img src="./screenshots/deploy.png" width="720px">
 </p>
 
-同时，你也可以点击 PlatON Studio 底部栏的 `Transactions`，看到刚刚发送的部署交易，查询该交易的执行状态（pending、mined 或 executed），或点击该交易再次打开交易详情弹窗。
+同时，你也可以点击 PlatON Studio 底部栏的 *Transactions*，看到刚刚发送的部署交易，查询该交易的执行状态（pending、mined 或 executed），或点击该交易再次打开交易详情弹窗。
 
 ### 合约浏览器
 
-成功部署智能合约后，点击弹窗中 *Contract* 旁的地址，将切换至合约浏览器，PlatON Studio 将自动打开刚才部署完成的智能合约。你也可以点击顶部的 *Contract* 标签切换至合约浏览器，在地址栏中输入希望打开的合约地址。PlatON Studio 支持同时打开多个合约，方便进行多合约的调试工作。
+成功部署智能合约后，点击交易详情弹窗中 *Contract* 旁的地址，PlatON Studio 将切换至合约浏览器，并自动打开刚部署完成的智能合约。你也可以点击顶部的 *Contract* 标签切换至合约浏览器，在地址栏中输入希望打开的合约地址。PlatON Studio 支持同时打开多个合约，方便进行多合约的调试工作。
 
 合约浏览器页面主要分为三个部分：
 
-- 左边栏用于调用合约的写入方法：点击蓝色按钮弹出的下拉框，显示当前合约的写入方法，可以选择希望调用的写入方法；
-- 中间栏用于进行合约的数据读取：点击蓝色按钮弹出的下拉框，显示当前合约的读取方法，可以选择希望查询的读取方法；
-- 右边栏用于进行合约的事件查询，点击蓝色按钮弹出的下拉框，显示当前合约的事件列表，可以选择希望查询的事件。
+- 左边栏用于调用合约的写入方法：点击蓝色下拉框，选择希望调用该合约的写入方法；
+- 中间栏用于进行合约的数据读取：点击蓝色下拉框，选择希望查询该合约的读取方法；
+- 右边栏用于进行合约的事件查询，点击蓝色下拉框，选择希望查询该合约的事件。
 
 PlatON Studio 在部署合约后将自动保存合约 ABI，并在读取合约时读取 ABI 数据，用于生成上面的写入方法、读取方法、事件查询，和它们各自的参数表单（关于更多 ABI 的使用参见 [ABI Storage](#abi-storage)）。
 
