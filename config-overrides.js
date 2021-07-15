@@ -65,9 +65,9 @@ const overrides = [
     '@obsidians/project': `@obsidians/${process.env.BUILD}-project`,
     '@obsidians/contract': `@obsidians/${process.env.BUILD}-contract`,
     '@obsidians/explorer': `@obsidians/${process.env.BUILD}-explorer`,
-    '@obsidians/sdk': `@obsidians/${process.env.PROJECT}-sdk`,
     '@obsidians/network': `@obsidians/${process.env.BUILD}-network`,
     '@obsidians/node': `@obsidians/${process.env.BUILD}-node`,
+    '@obsidians/premium-editor': path.resolve(__dirname, process.env.PREMIUM_EDITOR || 'empty.js'),
   }),
   overrideProcessEnv({
     CDN: JSON.stringify(!!process.env.CDN),
@@ -81,7 +81,6 @@ const overrides = [
     CHAIN_SHORT_NAME: '"Alaya"',
     CHAIN_EXECUTABLE_NAME: '"Alaya Node"',
     CHAIN_EXECUTABLE_NAME_IN_LABEL: '"Alaya node"',
-    TOKEN_SYMBOL: `function (n) { return n && n.startsWith('platon') ? 'LAT' : 'ATP' }`,
     COMPILER_NAME: '"Alaya Truffle"',
     COMPILER_NAME_IN_LABEL: '"Alaya truffle"',
     COMPILER_EXECUTABLE_NAME: '"alaya-truffle"',
