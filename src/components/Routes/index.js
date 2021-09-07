@@ -7,6 +7,7 @@ import { Input, LoadingScreen, CenterScreen } from '@obsidians/ui-components'
 import { NewProjectModal } from '@obsidians/project'
 
 import BottomBar from './BottomBar'
+import FrameworkSelector from './Project/FrameworkSelector'
 
 Input.defaultProps = {
   type: 'text',
@@ -18,6 +19,7 @@ Input.defaultProps = {
 
 NewProjectModal.defaultProps = {
   defaultTemplate: 'sol-helloworld',
+  defaultFramework: 'alaya-truffle',
   templates: [
     {
       group: 'solidity',
@@ -35,7 +37,8 @@ NewProjectModal.defaultProps = {
         { id: 'wasm-token', display: 'Standard Token (ERC20)' },
       ],
     },
-  ]
+  ],
+  FrameworkSelector,
 }
 
 const UserHomepage = lazy(() => import('./UserHomepage' /* webpackChunkName: "tabs" */))
@@ -46,7 +49,7 @@ const Network = lazy(() => import('./Network' /* webpackChunkName: "tabs" */))
 
 export default function (props) {
   return (
-    <React.Fragment>
+    <>
       {props.children}
       <Suspense fallback={<LoadingScreen />}>
         <CacheSwitch>
@@ -95,6 +98,6 @@ export default function (props) {
         component={BottomBar}
         className='border-top-1 d-flex flex-row'
       />
-    </React.Fragment>
+    </>
   )
 }

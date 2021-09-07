@@ -9,9 +9,9 @@ import keypairManager, { KeypairInputSelector } from '@obsidians/keypair'
 
 import { List } from 'immutable'
 
-import PlatonSdk, { kp } from '@obsidians/platon-sdk'
+import PlatonSdk from '@obsidians/platon-sdk'
 
-keypairManager.kp = kp
+keypairManager.kp = PlatonSdk.kp
 networkManager.addSdk(PlatonSdk, PlatonSdk.networks)
 
 const prefix = {
@@ -33,7 +33,7 @@ class HeaderWithRedux extends PureComponent {
 
     this.setState({ networkList: List(networkManager.networks) }, this.setNetwork)
     if (!networkManager.network) {
-      networkManager.setNetwork(networkManager.networks[0])
+      networkManager.setNetwork(networkManager.networks[0], { notify: false })
     }
     this.navGuard = new NavGuard(this.props.history)
   }
